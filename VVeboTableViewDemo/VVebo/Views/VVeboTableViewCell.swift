@@ -45,7 +45,7 @@ class VVeboTableViewCell : UITableViewCell {
     private var commentsRect = CGRect.zero
     private var repostsRect = CGRect.zero
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         clipsToBounds = true
         
@@ -100,7 +100,7 @@ class VVeboTableViewCell : UITableViewCell {
     override var frame: CGRect {
         didSet {
             guard let topLine = topLine else { return }
-            contentView.bringSubview(toFront: topLine)
+            contentView.bringSubviewToFront(topLine)
             topLine.frame.origin.y = frame.height - 0.5
         }
     }

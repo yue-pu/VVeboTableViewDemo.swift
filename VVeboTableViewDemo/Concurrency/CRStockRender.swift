@@ -41,16 +41,16 @@ class CRStockRender {
         style.lineBreakMode = .byClipping
 
         _stock.name.draw(at: CGPoint(x: offSetX, y: 31), withAttributes: [
-            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 16),
-            NSAttributedStringKey.paragraphStyle: style
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),
+            NSAttributedString.Key.paragraphStyle: style
             ]
         )
         
         UIColor.black.set()
 
         _stock.name.draw(at: CGPoint(x: offSetX, y: 30), withAttributes: [
-            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 16),
-            NSAttributedStringKey.paragraphStyle: style
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),
+            NSAttributedString.Key.paragraphStyle: style
             ]
         )
 
@@ -145,15 +145,15 @@ class CRStockRender {
         let style = NSMutableParagraphStyle()
         style.lineBreakMode = .byClipping
         _stock.name.draw(at: CGPoint(x: offSetX, y: 31), withAttributes: [
-            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 16),
-            NSAttributedStringKey.paragraphStyle: style
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),
+            NSAttributedString.Key.paragraphStyle: style
             ]
         )
 
         UIColor.black.set()
         _stock.name.draw(at: CGPoint(x: offSetX, y: 30), withAttributes: [
-            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 16),
-            NSAttributedStringKey.paragraphStyle: style
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),
+            NSAttributedString.Key.paragraphStyle: style
             ]
         )
 

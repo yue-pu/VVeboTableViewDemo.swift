@@ -10,7 +10,7 @@ class LazyTableView: UITableView {
     fileprivate lazy var datas: [NSMutableDictionary?] = []
     fileprivate var targetRect: CGRect?
 
-    override init(frame: CGRect, style: UITableViewStyle) {
+    override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         separatorStyle = .none
         dataSource = self

@@ -9,7 +9,7 @@
 extension UIScreen {
     @objc
     static var screenWidth: CGFloat {
-        if UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) {
+        if UIApplication.shared.statusBarOrientation.isLandscape {
             return UIScreen.main.nativeBounds.height / UIScreen.main.nativeScale
         } else {
             return UIScreen.main.nativeBounds.width / UIScreen.main.nativeScale

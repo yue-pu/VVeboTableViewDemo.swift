@@ -62,7 +62,7 @@ extension String {
         ]
 
         let style = CTParagraphStyleCreate(alignmentSetting, alignmentSetting.count)
-        let attributes: [NSAttributedStringKey: Any] = [
+        let attributes: [NSAttributedString.Key: Any] = [
             .font: font,
             .paragraphStyle: style
         ]
@@ -104,7 +104,7 @@ extension String {
 
         let style = CTParagraphStyleCreate(alignmentSetting, alignmentSetting.count)
 
-        let attributes: [NSAttributedStringKey: Any] = [
+        let attributes: [NSAttributedString.Key: Any] = [
             .font: font1,
             .foregroundColor: textColor.cgColor,
             .paragraphStyle: style

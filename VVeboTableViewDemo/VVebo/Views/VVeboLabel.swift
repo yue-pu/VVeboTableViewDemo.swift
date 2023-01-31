@@ -148,7 +148,7 @@ class VVeboLabel : UIView {
                 let hasImage = labelImageView.image != nil
                 if hasImage && currentRange.location != -1 && currentRange.location >= match.range.location && currentRange.length + currentRange.location <= match.range.length + match.range.location {
                     // 不需要特殊处理的字符串
-                    coloredString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(r: 224, g: 44, b: 86).cgColor, range: match.range)
+                    coloredString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(r: 224, g: 44, b: 86).cgColor, range: match.range)
 
                     // ???: touchEnd中已处理，这里是否不需要
 //                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
@@ -158,7 +158,7 @@ class VVeboLabel : UIView {
                 } else {
                     // 正则中定义需要特殊处理的字符串
                     guard let highlightColor = highlightColors[key] else { continue }
-                    coloredString.addAttribute(NSAttributedStringKey.foregroundColor, value: highlightColor, range: match.range)
+                    coloredString.addAttribute(NSAttributedString.Key.foregroundColor, value: highlightColor, range: match.range)
                 }
             }
         }
@@ -258,7 +258,7 @@ class VVeboLabel : UIView {
 
             let style = CTParagraphStyleCreate(alignmentSetting, alignmentSetting.count)
 
-            let attributes: [NSAttributedStringKey: Any] = [
+            let attributes: [NSAttributedString.Key: Any] = [
                 .font: font,
                 .foregroundColor: self.textColor.cgColor,
                 .paragraphStyle: style
@@ -547,7 +547,7 @@ class VVeboLabel : UIView {
     }
 
     deinit {
-        print("\(#function, self)")
+        print("\(#function)", self)
     }
     
     required init?(coder aDecoder: NSCoder) {

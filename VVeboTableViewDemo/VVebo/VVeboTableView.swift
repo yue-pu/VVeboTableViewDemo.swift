@@ -11,7 +11,7 @@ class VVeboTableView: UITableView {
     fileprivate lazy var needLoadArr: [IndexPath] = [] // 接收需要加载Cell的IndexPath
     fileprivate var scrollToToping = false
 
-    override init(frame: CGRect, style: UITableViewStyle) {
+    override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         separatorStyle = .none
         dataSource = self
